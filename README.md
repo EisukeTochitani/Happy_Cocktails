@@ -16,7 +16,7 @@
  たまには違ったお酒が飲んでみたくなったときに
 
 ## 設計書
-<...>
+
 
 ## 機能一覧
 <https://docs.google.com/spreadsheets/d/1jsOiM4nbIClJMaPF5a1oXb6hErwJIbQG8BU-Uewwois/edit?usp=sharing>
