@@ -60,3 +60,18 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'devise'
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+gem "refile-mini_magick"
+gem 'pry-byebug', group: :development
+gem 'kaminari','~> 1.2.1'
+gem 'font-awesome-sass', '~> 5.13'
+gem 'slim-rails', '3.1.3'
+gem 'html2slim' ##　html.erbをhtmle.slimに変換するためのgem
+
+
+gem 'rubocop', require:false
+gem 'rubocop-rails', require:false
+
+
