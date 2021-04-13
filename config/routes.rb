@@ -1,9 +1,25 @@
 Rails.application.routes.draw do
-  devise_for :members
-  root 'homes#top'
-  get 'homes/about'
-  resources :posts
   
- 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  devise_for :admins, controllers: {
+    sessions: "admins/sessions"
+  }
+   namespace :admins do
+    resources :members, only: [:index, :edit]
+    resources :posts, only: [:index, :show, :destroy]
+    resources :genres, only: [:index, :edit, :create, :update, :destroy]
+  end
+  
+  devise_for :members, controllers: {
+    sessions: "members/sessions",
+    registrations: "members/registrations",
+  }
+ scope module: :members do
+    root "homes#top"
+    
+  
+end
+  
+  
+
+
 end

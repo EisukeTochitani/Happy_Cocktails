@@ -1,11 +1,10 @@
 doctype html
 html
-  head
-    title
-      | HappyCocktails
-    = csrf_meta_tags
-    = csp_meta_tag
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  header
+     - if member_signed_in?
+      =link_to 'ログアウト', destroy_member_session_path, method: :delete
+     - else
+      =link_to '新規登録', new_member_registration_path
+      =link_to 'ログイン', new_member_session_path
   body
     = yield

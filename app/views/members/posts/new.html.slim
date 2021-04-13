@@ -1,0 +1,15 @@
+.table 新規投稿
+
+= form_with model:@post, local: true do |f|
+
+ h4 タイトル
+ = f.text_field :title
+ 
+ 
+ 
+ 
+ 
+ h4 レシピ
+ = f.text_area :body
+ 
+ 

@@ -1,0 +1,20 @@
+header
+  nav
+    ul
+      - if member_signed_in?
+        li
+          | ユーザー
+        li
+          = link_to "ログアウト", destroy_member_session_path, method: :delete
+      - elsif admin_signed_in?
+        li
+          | 管理者
+        li
+          = link_to "ログアウト", destroy_admin_session_path, method: :delete
+      - else
+        li
+          | 会員
+        li
+          = link_to "新規登録", new_member_registration_path
+        li
+          = link_to "ログイン", new_member_session_path
