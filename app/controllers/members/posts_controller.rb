@@ -4,6 +4,17 @@ class Members::PostsController < ApplicationController
   def new
     @post = Post.new
   end
+  
+   def create
+    @post = Post.new(post_params)
+    @post.member_id = current_member.id
+    if @post.save
+      redirect_to posts_path(@post.id)
+    else
+      render :new
+    end
+   end
+
 
   def index
   end
@@ -14,9 +25,7 @@ class Members::PostsController < ApplicationController
   def edit
   end
 
-  def create
-  end
-
+ 
   def update
   end
 

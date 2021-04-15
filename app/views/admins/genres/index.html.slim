@@ -20,6 +20,6 @@
         - @genres.each do |genre|
           tr
             td
-              = genre.name
+              = genre.genre_name
             td
               = link_to "編集", edit_admins_genre_path(genre.id), class:"btn btn-info", data: {"turbolinks" => false}
