@@ -70,7 +70,9 @@ gem 'font-awesome-sass', '~> 5.13'
 gem 'slim-rails', '3.1.3'
 gem 'html2slim' ##　html.erbをhtmle.slimに変換するためのgem
 gem 'acts-as-taggable-on', '~> 6.0'
-
+gem 'bootstrap', '~> 4.5'
+gem 'font-awesome-sass', '~> 5.13'
+gem "jquery-rails"
 gem 'rubocop', require:false
 gem 'rubocop-rails', require:false
 

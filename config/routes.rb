@@ -16,7 +16,7 @@ Rails.application.routes.draw do
  scope module: :members do
     root "homes#top"
     get "homes/about" => "homes#about", as: "about"
-    get "members/my_page" => "members#show", as: "my_page"
+    
     resources :members, only: [:show, :edit, :create, :update]
     resources :posts
   

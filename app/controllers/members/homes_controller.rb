@@ -1,6 +1,7 @@
-class Members::HomesController < ApplicationController
- 
+class Members:: HomesController < ApplicationController
+
   def top
+   
   end
 
   def about

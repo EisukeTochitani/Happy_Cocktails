@@ -5,13 +5,16 @@
  h4 タイトル
  = f.text_field :title
  
+ h4 ジャンル
+ =f.collection_select :genre_id, Genre.all, :id, :genre_name, include_blank: "選択して下さい"
  
  h4 画像
  = f.attachment_field :image
  
- 
+   
  h4 レシピ
  = f.text_area :body
  
  
- = f.submit "投稿"
+ = f.submit "投稿", class:"btn btn-success"
+ 

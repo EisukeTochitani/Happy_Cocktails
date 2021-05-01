@@ -3,21 +3,20 @@ class Members::MembersController < ApplicationController
 
 
   def show
-    @member = member.find(params[:id])
+    @member = Member.find(params[:id])
     @posts = @member.posts
-    @post = Post.new
   end
 
   def edit
-    @member = member.find(params[:id])
+    @member = Member.find(params[:id])
   end
 
   def update
     if @member.update(member_params)
       redirect_to my_page_path
-      
+    end
 
   end
-  
-  
+
+
 end

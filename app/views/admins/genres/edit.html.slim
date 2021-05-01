@@ -1,13 +1,14 @@
 .container
   h1
     | ジャンル編集
-   table.table
-    = form_with model:[:admins, @genre], local:true do |f| 
+
+
+
+    = form_with model:[:admins, @genre], local:true do |f|
       tr
         td
-          = f.text_field :name 
+          = f.text_field :name
         td
-          = f.submit "編集", class:"btn btn-success" 
+          = f.submit "更新", class:"btn btn-success"
         td
-          = link_to "削除", admins_genre_path, class:"btn btn-danger", method: :delete 
-    
+          = link_to "削除", admins_genres_path, class:"btn btn-danger", method: :delete
